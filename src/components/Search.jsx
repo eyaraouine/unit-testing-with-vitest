@@ -35,7 +35,7 @@ import {useState} from 'react';
                </form>
              </div>
         
-             <div className="container mx-auto">{searching && !message ? ( <span> loading... </span>): message ? ( <div className = "message"> {message} </div>): (movies.map(movie => ( 
+             <div className="container mx-auto">{searching && !message ? ( <span role="load"> loading... </span>): message ? ( <div className = "message"> {message} </div>): (movies.map(movie => ( 
                 <div className="inline-block px-2 w-64 h-64"key={movie.imdbID}>
                      <div className="bg-white rounded-lg overflow-hidden shadow-xl my-8 py-4">
                       <img src={movie.Poster} alt="movieimage" className="w-full h-64"/>

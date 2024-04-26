@@ -16,10 +16,9 @@ test('searches movies and renders them', async () => {
 
   // Attendre que les films soient chargés
  await waitFor(() => {
-    expect(screen.getAllByText('loading...')).toBeInTheDocument();
-    expect(screen.queryAllByText('Avatar')).toBeInTheDocument();
+    const avatars = screen.getAllByText(/^Avatar$/);
+    expect(avatars.length).toBeGreaterThan(0);
   });
- // const movieTitles = await screen.findAllByText('Avatar');
-  //expect(movieTitles.length).toBeGreaterThan(0); // Vérifier s'il y a au moins un titre de film "Avatar"
+ 
   
 });
